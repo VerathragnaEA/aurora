@@ -3,9 +3,9 @@
 <info>
     <name>Blood Elf</name>
     <update version="1.0">
-        <file 
+        <file
             name="race-blood-elf.xml"
-            url="https://raw.githubusercontent.com/aurorabuilder/elements/master/README.md" />
+            url="https://raw.githubusercontent.com/VerathragnaEA/aurora/main/race-blood-elf.xml" />
     </update>
 </info>
 	<element name="Blood Elf" type="Race" source="Homebrew" id="ID_HOMEBREW_RACE_BLOOD_ELF">
