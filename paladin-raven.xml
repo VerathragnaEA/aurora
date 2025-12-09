@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<elements>
+<info>
+  <name>Oath of the Raven</name>
+  <update version="1.0">
+    <file 
+      name="paladin-raven.xml"
+      url="https://raw.githubusercontent.com/aurorabuilder/elements/master/README.md" />
+  </update>
+</info>
+  <element name="Oath of the Raven" type="Archetype" source="Homebrew: Oath of the Raven" id="ID_HOME_OATH_OF_THE_RAVEN">
+    <supports>Sacred Oath</supports>
+    <description>
+      <p>A PALADIN OF THE OATH OF THE RAVEN dedicates their soul to the service of The Raven Queen. These knights embrace the beauty of life and the sanctity of death, and swear to destroy anything that disrupts the natural cycle. Known as Knight of The Raven, these warriors serve as The Raven Queen's emissaries in the mortal realm, clad in black armor adorned with raven wings and raven feather motifs.</p>
+      <h5 class="caption">Tenets of the Raven</h5>
+      <p>The Oath of the Raven revolves around respecting the impartial nature of death and ensuring the cycle of life and death is unbroken. The first three tenets emphasize obedience to the natural order, while the fourth speaks to the merciless judgement of The Raven Queen upon those who defy it.</p>
+      <p class="indent"><strong><em>Accept Your Fate.</em></strong> Every soul must pass beyond at its appointed time, neither early nor late.</p>
+      <p class="indent"><strong><em>Guide the Passage.</em></strong> Ensure souls transition peacefully; allow no force to chain them to the mortal realm.</p>
+      <p class="indent"><strong><em>Shatter the Defiant.</em></strong> Oppose those who hinder the passage of souls; those who disrupt the cycle are beyond redemption.</p>
+      <p class="indent"><strong><em>Uphold the Judgement.</em></strong> Adhere to the laws of life and death; offer no mercy, only absolute and impartial justice.</p>
+      <div element="ID_HOME_OATH_OF_THE_RAVEN_OATH_SPELLS" />
+      <div element="ID_HOME_OATH_OF_THE_RAVEN_CHANNEL_DIVINITY" />
+      <div element="ID_HOME_OATH_OF_THE_RAVEN_AURA_OF_SHADOWS" />
+      <div element="ID_HOME_OATH_OF_THE_RAVEN_KNIGHT_OF_RETRIBUTION" />
+      <div element="ID_HOME_OATH_OF_THE_RAVEN_RAVEN_QUEENS_CHAMPION" />
+    </description>
+    <sheet display="false" />
+    <rules>
+      <grant type="Archetype Feature" id="ID_HOME_OATH_OF_THE_RAVEN_OATH_SPELLS" level="3" />
+      <grant type="Archetype Feature" id="ID_HOME_OATH_OF_THE_RAVEN_CHANNEL_DIVINITY" level="3" />
+      <grant type="Archetype Feature" id="ID_HOME_OATH_OF_THE_RAVEN_AURA_OF_SHADOWS" level="7" />
+      <grant type="Archetype Feature" id="ID_HOME_OATH_OF_THE_RAVEN_KNIGHT_OF_RETRIBUTION" level="15" />
+      <grant type="Archetype Feature" id="ID_HOME_OATH_OF_THE_RAVEN_RAVEN_QUEENS_CHAMPION" level="20" />
+    </rules>
+  </element>
+
+  <element name="Oath Spells" type="Archetype Feature" source="Homebrew: Oath of the Raven" id="ID_HOME_OATH_OF_THE_RAVEN_OATH_SPELLS">
+    <description>
+      <p><em>3rd-level Oath of the Raven feature</em></p>
+      <p>You gain the following Oath Spells at the paladin levels listed. See the Sacred Oath class feature for how oath spells work.</p>
+      <h5 class="caption">Oath of the Raven Spells</h5>
+      <table>
+        <thead>
+          <tr><td>Paladin Level</td><td>Spells</td></tr>
+        </thead>
+        <tr><td>3rd</td><td><em>protection from evil and good, false life</em></td></tr>
+        <tr><td>5th</td><td><em>gentle repose, silence</em></td></tr>
+        <tr><td>9th</td><td><em>speak with dead, spirit guardians</em></td></tr>
+        <tr><td>13th</td><td><em>blight, death ward</em></td></tr>
+        <tr><td>17th</td><td><em>hallow, shadow of moil</em></td></tr>
+      </table>
+    </description>
+    <sheet display="false" />
+    <rules>
+      <grant type="Spell" id="ID_PHB_SPELL_PROTECTION_FROM_EVIL_AND_GOOD" level="3" spellcasting="Paladin" prepared="true"/>
+      <grant type="Spell" id="ID_PHB_SPELL_FALSE_LIFE" level="3" spellcasting="Paladin" prepared="true"/>
+      <grant type="Spell" id="ID_PHB_SPELL_GENTLE_REPOSE" level="5" spellcasting="Paladin" prepared="true"/>
+      <grant type="Spell" id="ID_PHB_SPELL_SILENCE" level="5" spellcasting="Paladin" prepared="true"/>
+      <grant type="Spell" id="ID_PHB_SPELL_SPEAK_WITH_DEAD" level="9" spellcasting="Paladin" prepared="true"/>
+      <grant type="Spell" id="ID_PHB_SPELL_SPIRIT_GUARDIANS" level="9" spellcasting="Paladin" prepared="true"/>
+      <grant type="Spell" id="ID_PHB_SPELL_BLIGHT" level="13" spellcasting="Paladin" prepared="true"/>
+      <grant type="Spell" id="ID_PHB_SPELL_DEATH_WARD" level="13" spellcasting="Paladin" prepared="true"/>
+      <grant type="Spell" id="ID_PHB_SPELL_HALLOW" level="17" spellcasting="Paladin" prepared="true"/>
+      <grant type="Spell" id="ID_PHB_SPELL_SHADOW_OF_MOIL" level="17" spellcasting="Paladin" prepared="true"/>
+    </rules>
+  </element>
+
+  <element name="Channel Divinity" type="Archetype Feature" source="Homebrew: Oath of the Raven" id="ID_HOME_OATH_OF_THE_RAVEN_CHANNEL_DIVINITY">
+    <compendium display="false" />
+    <description>
+      <p><em>3rd-level Oath of the Raven feature</em></p>
+      <p>You gain the following two Channel Divinity options. See the Sacred Oath class feature for how Channel Divinity works.</p>
+      <p class="indent"><strong><em>Chains of the Dark Feather.</em></strong> As an action, you can summon shadowy chains resembling raven feathers. Each enemy creature within 30 feet of you must succeed on a Wisdom saving throw or have its movement speed reduced to 0, and if it is an undead or fiend it has disadvantage on attack rolls and saving throws while restrained. A restrained creature can repeat the save at the end of each of its turns, ending the effect on itself on a success.</p>
+      <p class="indent"><strong><em>Rebuke the Damned.</em></strong> When a creature within 30 feet of you deals damage to you, you can use your reaction to force it to make a Wisdom saving throw. On a failure, it takes necrotic damage equal to the damage it just dealt; on a success, it takes half as much.</p>
+    </description>
+    <sheet display="false" />
+    <rules>
+      <grant type="Archetype Feature" id="ID_HOME_OATH_OF_THE_RAVEN_CHANNEL_DIVINITY_CHAINS_OF_THE_DARK_FEATHER" />
+      <grant type="Archetype Feature" id="ID_HOME_OATH_OF_THE_RAVEN_CHANNEL_DIVINITY_REBUKE_THE_DAMNED" />
+    </rules>
+  </element>
+
+  <element name="Channel Divinity: Chains of the Dark Feather" type="Archetype Feature" source="Homebrew: Oath of the Raven" id="ID_HOME_OATH_OF_THE_RAVEN_CHANNEL_DIVINITY_CHAINS_OF_THE_DARK_FEATHER">
+    <sheet action="Action" usage="Channel Divinity">  
+      <description>Summon shadowy chains resembling raven feathers. Each enemy creature within 30 feet of you must succeed on a Wisdom saving throw or have its movement speed reduced to 0 for 1 minute and if it is an undead or fiend it has disadvantage on attack rolls and saving throws while restrained. A restrained creature can repeat the save at the end of each of its turns, ending the effect on itself on a success.</description>
+    </sheet>
+  </element>
+
+  <element name="Channel Divinity: Rebuke the Damned" type="Archetype Feature" source="Homebrew: Oath of the Raven" id="ID_HOME_OATH_OF_THE_RAVEN_CHANNEL_DIVINITY_REBUKE_THE_DAMNED">
+    <sheet usage="Reaction">
+      <description>After a creature within 30 feet deals damage to you, force it to make a Wisdom saving throw. On a failure, it takes necrotic damage equal to the damage it dealt, half on a success.</description>
+    </sheet>
+  </element>
+
+  <element name="Aura of Shadows" type="Archetype Feature" source="Homebrew: Oath of the Raven" id="ID_HOME_OATH_OF_THE_RAVEN_AURA_OF_SHADOWS">
+    <description>
+      <p><em>7th-level Oath of the Raven feature</em></p>
+      <p>If you aren’t incapacitated, you and friendly creatures within {{aura:radius}} feet have resistance to necrotic damage.</p>
+      <p class="indent">At 18th level, the radius increases to 30 feet.</p>
+    </description>
+    <sheet>
+      <description>If you aren’t incapacitated, you and friendly creatures within {{aura:radius}} feet have resistance to necrotic damage.</description>
+      <description level="18">If you aren’t incapacitated, you and friendly creatures within {{aura:radius}} feet have resistance to necrotic damage.</description>
+    </sheet>
+    <rules>
+      <stat name="aura:radius" value="10" />
+      <stat name="aura:radius" value="30" level="18" />
+    </rules>
+  </element>
+
+  <element name="Knight of Retribution" type="Archetype Feature" source="Homebrew: Oath of the Raven" id="ID_HOME_OATH_OF_THE_RAVEN_KNIGHT_OF_RETRIBUTION">
+    <description>
+      <p><em>15th-level Oath of the Raven feature</em></p>
+      <p>Whenever a creature hits you with a melee attack, that creature takes necrotic damage. The amount is 2d8 + your Charisma modifier, or 3d8 + your Charisma modifier if it is a fiend or an undead, provided you aren’t incapacitated.</p>
+    </description>
+    <sheet>
+      <description>When a creature hits you with a melee attack, it takes {{ret:2d8}} + {{ret:cha}} necrotic damage, or {{ret:3d8}} + {{ret:cha}} against fiends or undead.</description>
+    </sheet>
+    <rules>
+      <stat name="ret:2d8" value="2d8" />
+      <stat name="ret:3d8" value="3d8" bonus="if fiend or undead" />
+      <stat name="ret:cha" value="charisma:modifier" />
+    </rules>
+  </element>
+
+  <element name="Raven Queen’s Champion" type="Archetype Feature" source="Homebrew: Oath of the Raven" id="ID_HOME_OATH_OF_THE_RAVEN_RAVEN_QUEENS_CHAMPION">
+    <description>
+      <p><em>20th-level Oath of the Raven feature</em></p>
+      <p>For 1 hour, you assume a raven-like avatar, gaining the following benefits:</p>
+      <ul>
+        <li>You sprout black raven wings and gain a flying speed of 60 feet.</li>
+        <li>Enemies entering or starting their turn in a 30-foot aura take 2d8 necrotic damage.</li>
+        <li>Enemies have disadvantage on attack rolls against you, and all allies within 30 feet gain temporary hit points equal to your Charisma modifier at the start of each of their turns. These temporary hit points cannot be stack.</li>
+      </ul>
+      <p>Once you use this feature, you can’t use it again until you finish a long rest.</p>
+    </description>
+    <sheet action="Action" usage="1/Long Rest">
+      <description>Assume a raven-like avatar for 1 hour, gaining flight, an aura of necrotic damage, and enemy-related protections.</description>
+    </sheet>
+  </element>
+</elements>
