@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<elements>
+<info>
+    <name>Blood Elf</name>
+    <update version="1.0">
+        <file 
+            name="race-blood-elf.xml"
+            url="https://raw.githubusercontent.com/aurorabuilder/elements/master/README.md" />
+    </update>
+</info>
+	<element name="Blood Elf" type="Race" source="Homebrew" id="ID_HOMEBREW_RACE_BLOOD_ELF">
+		<description>
+			<p>Blood elves are a lineage of elves who have learned to draw power directly from their own blood and life force. They read the rhythm of heartbeats like others read ink on a page, and they use that inner vitality as both weapon and ward. Their magic is visceral, intimate, and often unsettling to those who do not understand it.</p>
+			<p class="indent">Like other elves, blood elves can live to be over 750 years old.</p>
+			<h4>BLOOD ELF TRAITS</h4>
+			<p>As a blood elf, you have the following racial traits.</p>
+			<p class="indent"><strong><em>Creature Type.</em></strong> You are a Humanoid. You are also considered an elf for any prerequisite or effect that requires you to be an elf.</p>
+			<p class="indent"><strong><em>Size.</em></strong> You are Medium.</p>
+			<p class="indent"><strong><em>Speed.</em></strong> Your walking speed is 30 feet.</p>
+			<p class="indent"><strong><em>Darkvision.</em></strong> You can see in dim light within 60 feet of you as if it were bright light, and in darkness as if it were dim light. You discern colors in that darkness only as shades of gray.</p>
+			<p class="indent"><strong><em>Fey Ancestry.</em></strong> You have advantage on saving throws you make to avoid or end the charmed condition on yourself.</p>
+			<p class="indent"><strong><em>Keen Senses.</em></strong> You have proficiency in the Perception skill.</p>
+			<p class="indent"><strong><em>Bloodsense.</em></strong> Your connection to living essence allows you to sense nearby creatures without relying entirely on sight. You have blindsight out to a range of 5 feet, and you have advantage on Wisdom (Perception) checks that rely on hearing or on sensing vibrations.</p>
+			<p class="indent"><strong><em>Bloodline Arcanum.</em></strong> Your blood carries latent magical power. You know the <em>Life Leech</em> cantrip (described below). Constitution is your spellcasting ability for this spell.</p>
+			<p class="indent"><strong><em>Life Leech.</em></strong> You pull a strand of life force from a creature you can see within 30 feet of you. Make a ranged spell attack against the target. On a hit, the target takes 1d6 necrotic damage, and you regain 1 hit point. This spell's damage and healing increase when you reach higher levels: 2d6 damage and 2 hit points at 5th level, 3d6 and 3 hit points at 11th level, and 4d6 and 4 hit points at 17th level. You can’t regain hit points from this spell if you are above half your hit point maximum.</p>
+			<p class="indent"><strong><em>Blood Resilience.</em></strong> Your blood hardens against harm in moments of danger. When you take bleeding, necrotic, or poison damage, you can use your reaction to gain resistance to that instance of damage. You can use this trait a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest.</p>
+			<p class="indent"><strong><em>Hemomantic Surge.</em></strong> As a bonus action, you can briefly overcharge your body with your own life essence. Until the start of your next turn, your walking speed increases by 10 feet, and the next attack roll or ability check you make before the end of your turn has advantage. When the surge ends, you take 1 damage that cannot be reduced. You can use this trait once, and you regain the ability to do so when you finish a short or long rest.</p>
+			<p class="indent"><strong><em>Trance.</em></strong> You don't need to sleep, and magic can't put you to sleep. You can finish a long rest in 4 hours if you spend those hours in a trancelike meditation, during which you retain consciousness.</p>
+			<p class="indent">Whenever you finish this trance, you can gain two proficiencies that you don't have, each one with a weapon or a tool of your choice selected from the Player's Handbook. You mystically acquire these proficiencies by drawing them from shared elven memory, and you retain them until you finish your next long rest.</p>
+		</description>
+
+		<sheet display="false" />
+
+		<rules>
+			<select type="Ability Score Improvement" name="Ability Score Improvement Option (Blood Elf)" supports="Custom Ability Score Improvement Option" />
+			<grant type="Size" id="ID_SIZE_MEDIUM" />
+			<stat name="innate speed" value="30" bonus="base" />
+			<grant type="Grants" id="ID_INTERNAL_RACIAL_TRAIT_TYPE_HUMANOID_ELF" />
+			<grant type="Vision" id="ID_VISION_DARKVISION" />
+
+			<grant type="Language" id="ID_LANGUAGE_COMMON" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_LANGUAGE" />
+			<select type="Language" name="Customized Language (Blood Elf)" supports="Custom Race Language" requirements="ID_WOTC_TCOE_OPTION_CUSTOMIZED_LANGUAGE" />
+			<select type="Language" name="Language (Blood Elf)" supports="Standard||Exotic" />
+
+			<grant type="Racial Trait" id="ID_HOMEBREW_RACIAL_TRAIT_BLOOD_ELF_FEY_ANCESTRY" />
+			<grant type="Racial Trait" id="ID_HOMEBREW_RACIAL_TRAIT_BLOOD_ELF_KEEN_SENSES" />
+			<grant type="Racial Trait" id="ID_HOMEBREW_RACIAL_TRAIT_BLOOD_ELF_BLOODSENSE" />
+			<grant type="Racial Trait" id="ID_HOMEBREW_RACIAL_TRAIT_BLOOD_ELF_BLOODLINE_ARCANUM" />
+			<grant type="Racial Trait" id="ID_HOMEBREW_RACIAL_TRAIT_BLOOD_ELF_BLOOD_RESILIENCE" />
+			<grant type="Racial Trait" id="ID_HOMEBREW_RACIAL_TRAIT_BLOOD_ELF_HEMOMANTIC_SURGE" />
+			<grant type="Racial Trait" id="ID_HOMEBREW_RACIAL_TRAIT_BLOOD_ELF_TRANCE" />
+		</rules>
+	</element>
+
+	<!-- FEY ANCESTRY -->
+	<element name="Fey Ancestry" type="Racial Trait" source="Homebrew" id="ID_HOMEBREW_RACIAL_TRAIT_BLOOD_ELF_FEY_ANCESTRY">
+		<description>
+			<p>You have advantage on saving throws you make to avoid or end the charmed condition on yourself.</p>
+		</description>
+		<sheet>
+			<description>You have advantage on saving throws you make to avoid or end the charmed condition on yourself.</description>
+		</sheet>
+	</element>
+
+	<!-- KEEN SENSES -->
+	<element name="Keen Senses" type="Racial Trait" source="Homebrew" id="ID_HOMEBREW_RACIAL_TRAIT_BLOOD_ELF_KEEN_SENSES">
+		<description>
+			<p>You have proficiency in the Perception skill.</p>
+		</description>
+		<sheet display="false" />
+		<rules>
+			<grant type="Proficiency" id="ID_PROFICIENCY_SKILL_PERCEPTION" requirements="!ID_WOTC_TCOE_OPTION_CUSTOMIZED_PROFICIENCY" />
+			<select type="Proficiency" name="Customized Skill Proficiency (Keen Senses)" supports="Skill" requirements="ID_WOTC_TCOE_OPTION_CUSTOMIZED_PROFICIENCY" />
+		</rules>
+	</element>
+
+	<!-- BLOODSENSE -->
+	<element name="Bloodsense" type="Racial Trait" source="Homebrew" id="ID_HOMEBREW_RACIAL_TRAIT_BLOOD_ELF_BLOODSENSE">
+		<description>
+			<p>Your connection to flowing blood lets you sense nearby creatures without relying entirely on sight. You have blindsight out to a range of 5 feet, and you have advantage on Wisdom (Perception) checks that rely on hearing or on sensing vibrations.</p>
+		</description>
+		<sheet>
+			<description>You have blindsight out to 5 feet and advantage on Wisdom (Perception) checks that rely on hearing or on sensing vibrations.</description>
+		</sheet>
+	</element>
+
+	<!-- BLOODLINE ARCANUM & LIFE LEECH -->
+	<element name="Bloodline Arcanum" type="Racial Trait" source="Homebrew" id="ID_HOMEBREW_RACIAL_TRAIT_BLOOD_ELF_BLOODLINE_ARCANUM">
+		<description>
+			<p>Your blood hums with latent magic. You know the <em>Life Leech</em> cantrip. Constitution is your spellcasting ability for this spell.</p>
+			<p class="indent"><strong><em>Life Leech.</em></strong> You pull a strand of life force from a creature you can see within 30 feet of you. Make a ranged spell attack against the target. On a hit, the target takes 1d6 necrotic damage, and you regain 1 hit point.</p>
+			<p class="indent">This spell's damage and healing increase when you reach higher levels: 2d6 damage and 2 hit points at 5th level, 3d6 and 3 hit points at 11th level, and 4d6 and 4 hit points at 17th level. You can’t regain hit points from this spell if you are above half your hit point maximum.</p>
+		</description>
+		<sheet>
+			<description>You know the Life Leech cantrip. Constitution is your spellcasting ability for it.&#13;
+			Life Leech: Ranged spell attack, 30 ft.; on a hit, the target takes 1d6 necrotic damage and you regain 1 hit point (2d6/2 hp at 5th level, 3d6/3 hp at 11th, 4d6/4 hp at 17th). You can’t regain hit points from this spell if you are above half your hit point maximum.</description>
+		</sheet>
+		<rules>
+			<grant type="Spell" id="ID_HB_SPELL_LIFE_LEECH" />
+		</rules>
+	</element>
+
+	<!-- BLOOD RESILIENCE -->
+	<element name="Blood Resilience" type="Racial Trait" source="Homebrew" id="ID_HOMEBREW_RACIAL_TRAIT_BLOOD_ELF_BLOOD_RESILIENCE">
+		<description>
+			<p>Your blood hardens against harm in moments of danger. When you take bleeding, necrotic, or poison damage, you can use your reaction to gain resistance to that instance of damage.</p>
+			<p class="indent">You can use this trait a number of times equal to your proficiency bonus, and you regain all expended uses when you finish a long rest.</p>
+		</description>
+		<sheet>
+			<description>When you take bleeding, necrotic, or poison damage, you can use your reaction to gain resistance to that instance of damage. Uses equal to your proficiency bonus, regained on a long rest.</description>
+		</sheet>
+	</element>
+
+	<!-- HEMOMANTIC SURGE -->
+	<element name="Hemomantic Surge" type="Racial Trait" source="Homebrew" id="ID_HOMEBREW_RACIAL_TRAIT_BLOOD_ELF_HEMOMANTIC_SURGE">
+		<description>
+			<p>As a bonus action, you can briefly overcharge your body with your own life essence. Until the start of your next turn, your walking speed increases by 10 feet, and the next attack roll or ability check you make before the end of your turn has advantage.</p>
+			<p class="indent">When the surge ends, you take 1 damage that cannot be reduced. You can use this trait once, and you regain the ability to do so when you finish a short or long rest.</p>
+		</description>
+		<sheet>
+			<description>Bonus Action: Until the start of your next turn, your speed increases by 10 feet and your next attack roll or ability check this turn has advantage. Then you take 1 damage that cannot be reduced. Usable once per short or long rest.</description>
+		</sheet>
+	</element>
+
+	<!-- TRANCE -->
+	<element name="Trance" type="Racial Trait" source="Homebrew" id="ID_HOMEBREW_RACIAL_TRAIT_BLOOD_ELF_TRANCE">
+		<description>
+			<p>You don't need to sleep, and magic can't put you to sleep. You can finish a long rest in 4 hours if you spend those hours in a trancelike meditation, during which you retain consciousness.</p>
+			<p class="indent">Whenever you finish this trance, you can gain two proficiencies that you don't have, each one with a weapon or a tool of your choice selected from the Player's Handbook. You mystically acquire these proficiencies by drawing them from shared elven memory, and you retain them until you finish your next long rest.</p>	
+		</description>
+		<sheet>
+			<description>You don't need to sleep, and magic can't put you to sleep. You can finish a long rest in 4 hours if you spend those hours in a trancelike meditation, during which you remain conscious.&#13;
+			Whenever you finish this trance, you can gain two proficiencies that you don't have, each one with a weapon or a tool of your choice selected from the Player's Handbook. You retain them until you finish your next long rest.</description>
+		</sheet>
+	</element>
+
+</elements>
