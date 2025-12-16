@@ -2,143 +2,88 @@
 <elements>
 <info>
   <name>Oath of the Raven</name>
-  <update version="2.0">
+  <update version="2.1">
     <file 
       name="paladin-raven.xml"
       url="https://raw.githubusercontent.com/VerathragnaEA/aurora/main/paladin-raven.xml" />
   </update>
 </info>
 
-  <element name="Oath of the Raven" type="Archetype" source="Homebrew: Oath of the Raven" id="ID_HOME_OATH_OF_THE_RAVEN">
-    <supports>Sacred Oath</supports>
+<!-- ARCHETYPE -->
+<element name="Oath of the Raven" type="Archetype" source="Homebrew: Oath of the Raven" id="ID_HOME_OATH_OF_THE_RAVEN">
+  <supports>Sacred Oath</supports>
+  <description>
+    <p>Paladins of the Oath of the Raven dedicate their souls to the service of the Raven Queen. These knights honor the beauty of life and the sanctity of death, and swear to destroy anything that disrupts the natural cycle. Known as Knights of the Raven, they serve as the Raven Queen’s emissaries in the mortal realm.</p>
+
+    <h5 class="caption">Tenets of the Raven</h5>
+    <p>The Oath of the Raven demands reverence for death as an impartial certainty, and for the passage beyond the veil as a necessity.</p>
+
+    <p class="indent"><strong><em>Let the End Come.</em></strong> All lives move toward their final moment. Do not hasten it, do not delay it.</p>
+    <p class="indent"><strong><em>Guard the Passage.</em></strong> The dead must pass beyond the veil. Suffer no force that binds a soul against its time.</p>
+    <p class="indent"><strong><em>Preserve the Cycle.</em></strong> Those who fracture the cycle of life and death must be stopped.</p>
+    <p class="indent"><strong><em>Stand Beyond Judgment.</em></strong> Do not weigh the soul or pass sentence. You are not the arbiter—only the still hand.</p>
+
+    <div element="ID_HOME_OATH_OF_THE_RAVEN_OATH_SPELLS" />
+    <div element="ID_HOME_OATH_OF_THE_RAVEN_CHANNEL_DIVINITY" />
+    <div element="ID_HOME_OATH_OF_THE_RAVEN_AURA_OF_SHADOWS" />
+    <div element="ID_HOME_OATH_OF_THE_RAVEN_KNIGHT_OF_RETRIBUTION" />
+    <div element="ID_HOME_OATH_OF_THE_RAVEN_RAVEN_QUEENS_CHAMPION" />
+  </description>
+  <sheet display="false" />
+  <rules>
+    <grant type="Archetype Feature" id="ID_HOME_OATH_OF_THE_RAVEN_OATH_SPELLS" level="3" />
+    <grant type="Archetype Feature" id="ID_HOME_OATH_OF_THE_RAVEN_CHANNEL_DIVINITY" level="3" />
+    <grant type="Archetype Feature" id="ID_HOME_OATH_OF_THE_RAVEN_AURA_OF_SHADOWS" level="7" />
+    <grant type="Archetype Feature" id="ID_HOME_OATH_OF_THE_RAVEN_KNIGHT_OF_RETRIBUTION" level="15" />
+    <grant type="Archetype Feature" id="ID_HOME_OATH_OF_THE_RAVEN_RAVEN_QUEENS_CHAMPION" level="20" />
+  </rules>
+</element>
+
+<!-- CHANNEL DIVINITY -->
+<element name="Channel Divinity: Chains of Shadow" type="Archetype Feature" source="Homebrew: Oath of the Raven" id="ID_HOME_OATH_OF_THE_RAVEN_CHANNEL_DIVINITY_CHAINS_OF_THE_DARK_FEATHER">
+  <sheet action="Action" usage="Channel Divinity">
     <description>
-      <p>Paladins of the Oath of the Raven dedicate their souls to the service of the Raven Queen. These knights honor the beauty of life and the sanctity of death, and swear to destroy anything that disrupts the natural cycle. Known as Knights of the Raven, they serve as the Raven Queen’s emissaries in the mortal realm.</p>
-
-      <h5 class="caption">Tenets of the Raven</h5>
-      <p>The Oath of the Raven demands reverence for death as an impartial certainty, and for the passage beyond the veil as a necessity.</p>
-
-      <p class="indent"><strong><em>Let the End Come.</em></strong> All lives move toward their final moment. Do not hasten it, do not delay it.</p>
-      <p class="indent"><strong><em>Guard the Passage.</em></strong> The dead must pass beyond the veil. Suffer no force that binds a soul against its time.</p>
-      <p class="indent"><strong><em>Preserve the Cycle.</em></strong> Those who fracture the cycle of life and death must be stopped.</p>
-      <p class="indent"><strong><em>Stand Beyond Judgment.</em></strong> Do not weigh the soul or pass sentence. You are not the arbiter—only the still hand.</p>
-
-      <div element="ID_HOME_OATH_OF_THE_RAVEN_OATH_SPELLS" />
-      <div element="ID_HOME_OATH_OF_THE_RAVEN_CHANNEL_DIVINITY" />
-      <div element="ID_HOME_OATH_OF_THE_RAVEN_AURA_OF_SHADOWS" />
-      <div element="ID_HOME_OATH_OF_THE_RAVEN_KNIGHT_OF_RETRIBUTION" />
-      <div element="ID_HOME_OATH_OF_THE_RAVEN_RAVEN_QUEENS_CHAMPION" />
+      As an action, chains of living darkness rise from the shadows beneath creatures of your choice within 30 feet.
+      Each target must succeed on a Wisdom saving throw or have its speed reduced to 0 for {{pb:turns}} turns.
+      If the target is an undead or a fiend, it is also restrained and has disadvantage on attack rolls.
+      Affected creatures can repeat the saving throw at the end of each of their turns, ending the effect on a success.
     </description>
-    <sheet display="false" />
-    <rules>
-      <grant type="Archetype Feature" id="ID_HOME_OATH_OF_THE_RAVEN_OATH_SPELLS" level="3" />
-      <grant type="Archetype Feature" id="ID_HOME_OATH_OF_THE_RAVEN_CHANNEL_DIVINITY" level="3" />
-      <grant type="Archetype Feature" id="ID_HOME_OATH_OF_THE_RAVEN_AURA_OF_SHADOWS" level="7" />
-      <grant type="Archetype Feature" id="ID_HOME_OATH_OF_THE_RAVEN_KNIGHT_OF_RETRIBUTION" level="15" />
-      <grant type="Archetype Feature" id="ID_HOME_OATH_OF_THE_RAVEN_RAVEN_QUEENS_CHAMPION" level="20" />
-    </rules>
-  </element>
+  </sheet>
+  <rules>
+    <stat name="pb:turns" value="proficiencybonus" />
+  </rules>
+</element>
 
-  <element name="Oath Spells" type="Archetype Feature" source="Homebrew: Oath of the Raven" id="ID_HOME_OATH_OF_THE_RAVEN_OATH_SPELLS">
+<!-- 15th LEVEL -->
+<element name="Marked by the Queen" type="Archetype Feature" source="Homebrew: Oath of the Raven" id="ID_HOME_OATH_OF_THE_RAVEN_KNIGHT_OF_RETRIBUTION">
+  <description>
+    <p><em>15th-level Oath of the Raven feature</em></p>
+    <p>Whenever a creature hits you with an attack, it is marked until the end of your next turn. While marked, it has disadvantage on saving throws against effects you create. Whenever you deal damage to it, it takes extra necrotic damage equal to your Charisma modifier (minimum 1). Undead and fiends take double this damage and cannot regain hit points while marked.</p>
+  </description>
+  <sheet>
     <description>
-      <p><em>3rd-level Oath of the Raven feature</em></p>
-      <p>You gain the following Oath Spells at the paladin levels listed. See the Sacred Oath class feature for how oath spells work.</p>
-      <h5 class="caption">Oath of the Raven Spells</h5>
-      <table>
-        <thead>
-          <tr><td>Paladin Level</td><td>Spells</td></tr>
-        </thead>
-        <tr><td>3rd</td><td><em>protection from evil and good, bane</em></td></tr>
-        <tr><td>5th</td><td><em>gentle repose, silence</em></td></tr>
-        <tr><td>9th</td><td><em>speak with dead, bestow curse</em></td></tr>
-        <tr><td>13th</td><td><em>blight, death ward</em></td></tr>
-        <tr><td>17th</td><td><em>hallow, shadow of moil</em></td></tr>
-      </table>
+      When a creature hits you with an attack, it is marked. When you deal damage to it, it takes {{mark:cha}} necrotic damage
+      ({{mark:cha}} × 2 against undead or fiends) and cannot regain hit points.
     </description>
-    <sheet display="false" />
-    <rules>
-      <grant type="Spell" id="ID_PHB_SPELL_PROTECTION_FROM_EVIL_AND_GOOD" level="3" spellcasting="Paladin" prepared="true"/>
-      <grant type="Spell" id="ID_PHB_SPELL_BANE" level="3" spellcasting="Paladin" prepared="true"/>
-      <grant type="Spell" id="ID_PHB_SPELL_GENTLE_REPOSE" level="5" spellcasting="Paladin" prepared="true"/>
-      <grant type="Spell" id="ID_PHB_SPELL_SILENCE" level="5" spellcasting="Paladin" prepared="true"/>
-      <grant type="Spell" id="ID_PHB_SPELL_SPEAK_WITH_DEAD" level="9" spellcasting="Paladin" prepared="true"/>
-      <grant type="Spell" id="ID_PHB_SPELL_BESTOW_CURSE" level="9" spellcasting="Paladin" prepared="true"/>
-      <grant type="Spell" id="ID_PHB_SPELL_BLIGHT" level="13" spellcasting="Paladin" prepared="true"/>
-      <grant type="Spell" id="ID_PHB_SPELL_DEATH_WARD" level="13" spellcasting="Paladin" prepared="true"/>
-      <grant type="Spell" id="ID_PHB_SPELL_HALLOW" level="17" spellcasting="Paladin" prepared="true"/>
-      <grant type="Spell" id="ID_PHB_SPELL_SHADOW_OF_MOIL" level="17" spellcasting="Paladin" prepared="true"/>
-    </rules>
-  </element>
+  </sheet>
+  <rules>
+    <stat name="mark:cha" value="charisma:modifier" />
+  </rules>
+</element>
 
-  <element name="Channel Divinity" type="Archetype Feature" source="Homebrew: Oath of the Raven" id="ID_HOME_OATH_OF_THE_RAVEN_CHANNEL_DIVINITY">
-    <compendium display="false" />
+<!-- 20th LEVEL -->
+<element name="Avatar of the Raven Queen" type="Archetype Feature" source="Homebrew: Oath of the Raven" id="ID_HOME_OATH_OF_THE_RAVEN_RAVEN_QUEENS_CHAMPION">
+  <description>
+    <p><em>20th-level Oath of the Raven feature</em></p>
+    <p>As an action, you become the Avatar of the Raven Queen for 1 minute. Shadow gathers around you, and vast raven wings of living darkness unfurl from your form. You gain silent flight (60 ft., hover), immunity to fear and charm, automatic success against forced movement, and whenever you deal damage directly to a creature, that damage ignores resistance and treats immunity as resistance.</p>
+    <p>Once you use this feature, you can’t use it again until you finish a long rest.</p>
+  </description>
+  <sheet action="Action" usage="1/Long Rest">
     <description>
-      <p><em>3rd-level Oath of the Raven feature</em></p>
-      <p>You gain the following two Channel Divinity options. See the Sacred Oath class feature for how Channel Divinity works.</p>
-
-      <p class="indent"><strong><em>Chains of Shadow.</em></strong> As an action, you invoke the still will of the Raven Queen. From the shadows beneath your foes, chains of living darkness rise in silence, binding them where they stand. Each creature of your choice within 30 feet of you must make a Wisdom saving throw. On a failure, the creature’s speed becomes 0 for a number of turns equal to your proficiency bonus. If the affected creature is an undead or a fiend, it is also restrained by the chains and has disadvantage on attack rolls for the duration. A creature affected by this feature can repeat the saving throw at the end of each of its turns, ending the effect on itself on a success.</p>
-
-      <p class="indent"><strong><em>The Final Judgement.</em></strong> When a creature you can see within 30 feet of you would be reduced to 0 hit points, you can use your reaction to invoke the Final Judgement of the Raven Queen. The creature is instead reduced to 1 hit point. If the creature is undead or a fiend, this feature has no effect.</p>
+      Become the Avatar of the Raven Queen for 1 minute. Gain silent flight, immunity to fear and charm,
+      immunity to forced movement, and ignore resistance (treat immunity as resistance) on damage you deal directly.
     </description>
-    <sheet display="false" />
-    <rules>
-      <grant type="Archetype Feature" id="ID_HOME_OATH_OF_THE_RAVEN_CHANNEL_DIVINITY_CHAINS_OF_THE_DARK_FEATHER" />
-      <grant type="Archetype Feature" id="ID_HOME_OATH_OF_THE_RAVEN_CHANNEL_DIVINITY_REBUKE_THE_DAMNED" />
-    </rules>
-  </element>
-
-  <!-- NOTE: IDs preserved for compatibility; names updated to match new design -->
-  <element name="Channel Divinity: Chains of Shadow" type="Archetype Feature" source="Homebrew: Oath of the Raven" id="ID_HOME_OATH_OF_THE_RAVEN_CHANNEL_DIVINITY_CHAINS_OF_THE_DARK_FEATHER">
-    <sheet action="Action" usage="Channel Divinity">
-      <description>As an action, chains of living darkness rise from the shadows beneath creatures of your choice within 30 feet. Each target must make a Wisdom saving throw. On a failure, its speed becomes 0 for a number of turns equal to your proficiency bonus. If the target is an undead or a fiend, it is also restrained and has disadvantage on attack rolls. Affected creatures can repeat the saving throw at the end of each of their turns, ending the effect on a success.</description>
-    </sheet>
-  </element>
-
-  <element name="Channel Divinity: The Final Judgement" type="Archetype Feature" source="Homebrew: Oath of the Raven" id="ID_HOME_OATH_OF_THE_RAVEN_CHANNEL_DIVINITY_REBUKE_THE_DAMNED">
-    <sheet action="Reaction" usage="Channel Divinity">
-      <description>When a creature you can see within 30 feet would be reduced to 0 hit points, you can use your reaction to reduce it to 1 hit point instead. This has no effect on undead or fiends.</description>
-    </sheet>
-  </element>
-
-  <!-- Aura: ID preserved; name updated -->
-  <element name="The Queen’s Veil" type="Archetype Feature" source="Homebrew: Oath of the Raven" id="ID_HOME_OATH_OF_THE_RAVEN_AURA_OF_SHADOWS">
-    <description>
-      <p><em>7th-level Oath of the Raven feature</em></p>
-      <p>If you aren’t incapacitated, you and friendly creatures within {{aura:radius}} feet have resistance to necrotic damage and have advantage on saving throws against being frightened.</p>
-      <p class="indent">At 18th level, the radius increases to 30 feet.</p>
-    </description>
-    <sheet>
-      <description>If you aren’t incapacitated, you and friendly creatures within {{aura:radius}} feet have resistance to necrotic damage and have advantage on saving throws against being frightened.</description>
-      <description level="18">If you aren’t incapacitated, you and friendly creatures within {{aura:radius}} feet have resistance to necrotic damage and have advantage on saving throws against being frightened.</description>
-    </sheet>
-    <rules>
-      <stat name="aura:radius" value="10" />
-      <stat name="aura:radius" value="30" level="18" />
-    </rules>
-  </element>
-
-  <!-- 15th: ID preserved; name and content updated -->
-  <element name="Marked by the Queen" type="Archetype Feature" source="Homebrew: Oath of the Raven" id="ID_HOME_OATH_OF_THE_RAVEN_KNIGHT_OF_RETRIBUTION">
-    <description>
-      <p><em>15th-level Oath of the Raven feature</em></p>
-      <p>Beginning at 15th level, any creature that dares to strike you draws the quiet attention of the Raven Queen. Whenever a creature hits you with an attack, it is marked until the end of your next turn. While marked, the creature has disadvantage on saving throws against effects you create, and whenever you deal damage to it, the blow carries additional necrotic force equal to your Charisma modifier (minimum of 1). For undead and fiends, the additional necrotic damage is doubled, and the marked creature cannot regain hit points while the mark persists. This feature has no effect while you are incapacitated.</p>
-    </description>
-    <sheet>
-      <description>When a creature hits you with an attack, it is marked until the end of your next turn. While marked, it has disadvantage on saving throws against effects you create, and when you deal damage to it, it takes extra necrotic damage equal to your Charisma modifier (minimum 1). Undead and fiends take double this extra damage and can’t regain hit points while marked. No effect while you are incapacitated.</description>
-    </sheet>
-  </element>
-
-  <!-- 20th: ID preserved; name and content updated -->
-  <element name="Avatar of the Raven Queen" type="Archetype Feature" source="Homebrew: Oath of the Raven" id="ID_HOME_OATH_OF_THE_RAVEN_RAVEN_QUEENS_CHAMPION">
-    <description>
-      <p><em>20th-level Oath of the Raven feature</em></p>
-      <p>As an action, you become the Avatar of the Raven Queen for 1 minute. Shadow gathers around you, and vast raven wings of living darkness unfurl from your form. While in this state, you gain a flying speed of 60 feet, can hover, and move without sound. Your movement does not provoke opportunity attacks.</p>
-      <p>In this form, fear and influence find no purchase in you. You are immune to the frightened and charmed conditions, and you automatically succeed on saving throws against effects that would forcibly move you or knock you prone.</p>
-      <p>More than this, death itself recognizes your presence. Whenever you deal damage directly to a creature, that damage accepts no denial: resistance is ignored, and immunity is treated as resistance.</p>
-      <p>Once you use this feature, you can’t use it again until you finish a long rest.</p>
-    </description>
-    <sheet action="Action" usage="1/Long Rest">
-      <description>Become the Avatar of the Raven Queen for 1 minute, gaining silent flight, immunity to fear and charm, stability against forced movement, and the ability to ignore resistance (treat immunity as resistance) whenever you deal damage directly to a creature.</description>
-    </sheet>
-  </element>
+  </sheet>
+</element>
 
 </elements>
